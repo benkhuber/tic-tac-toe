@@ -1,0 +1,42 @@
+.gameboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gameboard-cell {
+    flex: 0 0 32%;
+    height: 50px;
+    margin-bottom: 5px;
+    border: solid black 2px;
+}
+
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 500px;
+    height: 500px;
+}
+
+.cell {
+    background-color: white;
+    padding: 0.5em;
+}
+
+.top {
+    border-bottom: solid purple 5px;
+
+}
+
+.bottom {
+    border-top: solid purple 5px;
+}
+
+.left {
+    border-right: solid purple 5px;
+}
+
+.right {
+    border-left: solid purple 5px;
+}
