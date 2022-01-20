@@ -1,42 +1,55 @@
-.gameboard-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.gameboard-cell {
-    flex: 0 0 32%;
-    height: 50px;
-    margin-bottom: 5px;
-    border: solid black 2px;
-}
-
-
 .gameboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 500px;
-    height: 500px;
+    grid-template-columns: repeat(3, auto);
 }
 
 .cell {
-    background-color: white;
-    padding: 0.5em;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
 
 .top {
-    border-bottom: solid purple 5px;
-
+    border-bottom: solid black 5px;
 }
 
 .bottom {
-    border-top: solid purple 5px;
+    border-top: solid black 5px;
 }
 
 .left {
-    border-right: solid purple 5px;
+    border-right: solid black 5px;
 }
 
 .right {
-    border-left: solid purple 5px;
+    border-left: solid black 5px;
+}
+
+
+.x::after {
+    content: 'X';
+}
+
+.o::after {
+    content: 'O';
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.cell:not(.disabled):hover {
+    background: #eee;
 }
